@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "200448596072",
+    "firebase_url": "https://hajraat-5bad2.firebaseio.com",
+    "project_id": "hajraat-5bad2",
+    "storage_bucket": "hajraat-5bad2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200448596072:android:50b4c97d9bf2b80eb403dd",
+        "android_client_info": {
+          "package_name": "com.example.hajraat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200448596072-fktsrlctpdt89atsh7uii5n1p5asle2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC30IsYxpslmGI6T9MSaL1w97vzov0tLEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200448596072-fktsrlctpdt89atsh7uii5n1p5asle2o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
