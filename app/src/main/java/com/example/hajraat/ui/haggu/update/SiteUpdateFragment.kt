@@ -21,7 +21,7 @@ class SiteUpdateFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.site_update_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_site_update, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -29,5 +29,6 @@ class SiteUpdateFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(SiteUpdateViewModel::class.java)
         // TODO: Use the ViewModel
     }
+
 
 }

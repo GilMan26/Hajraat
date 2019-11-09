@@ -21,7 +21,7 @@ class RequitementFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.requitement_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_requitement, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

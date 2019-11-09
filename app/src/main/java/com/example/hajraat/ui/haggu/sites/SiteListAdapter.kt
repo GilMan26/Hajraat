@@ -1,21 +1,27 @@
 package com.example.hajraat.ui.haggu.sites
 
-import android.view.View
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hajraat.databinding.RowItemSiteBinding
 
-class SiteListAdapter : RecyclerView.Adapter<SiteListAdapter.SiteViewHOlder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SiteViewHOlder {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+class SiteListAdapter(var list : ArrayList<String>, var callback : SiteClickHandler) : RecyclerView.Adapter<SiteListAdapter.ItemSiteViewHolder>()  {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemSiteViewHolder {
+        return ItemSiteViewHolder(RowItemSiteBinding.inflate(LayoutInflater.from(parent.context), parent , false))
     }
 
-    override fun onBindViewHolder(holder: SiteViewHOlder, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun onBindViewHolder(holder: ItemSiteViewHolder, position: Int) {
+        holder.binding.nameTV.text = list[position]
+        holder.itemView.setOnClickListener{
+            callback.onClick(list[position])
+        }
     }
 
-    override fun getItemCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun getItemCount(): Int = list.size
 
-    class SiteViewHOlder(itemView : View) : RecyclerView.ViewHolder(itemView)
+    class ItemSiteViewHolder(val binding : RowItemSiteBinding) : RecyclerView.ViewHolder(binding.root)
+
+    interface SiteClickHandler{
+        fun onClick(site : String)
+    }
 }
