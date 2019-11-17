@@ -18,8 +18,7 @@
             android:layout_height="wrap_content"
             android:background="#FFF"
             app:layout_constraintTop_toTopOf="parent"
-            android:minHeight="?attr/actionBarSize"
-            app:navigationIcon="@drawable/ic_back">
+            android:minHeight="?attr/actionBarSize">
 
 
             <TextView
@@ -27,7 +26,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Toolbar Title" />
+                android:textSize="14sp"
+                android:text="Hajraat Hajraat" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -37,6 +37,12 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toBottomOf="@id/toolbar_top"
             app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <FrameLayout
+            android:id="@+id/popupFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

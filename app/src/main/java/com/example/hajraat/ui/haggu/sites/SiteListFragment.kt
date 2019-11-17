@@ -6,15 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 
 import com.example.hajraat.R
+import com.example.hajraat.ui.haggu.FragmentActivityInteracator
+import com.example.hajraat.ui.models.SiteUI
 import kotlinx.android.synthetic.main.fragment_site_list.*
 
 class SiteListFragment : Fragment() {
 
     companion object {
-        fun newInstance() = SiteListFragment()
+        fun newInstance(fragmentActivityInteracator: FragmentActivityInteracator) = SiteListFragment()
     }
 
     private lateinit var viewModel: SiteListViewModel
@@ -24,7 +25,6 @@ class SiteListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_site_list, container, false)
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,14 +43,14 @@ class SiteListFragment : Fragment() {
     }
 
     fun initRecycler(){
-        var list = arrayListOf<String>()
-        list.add("Laxmi Chitfund")
-        list.add("Star Fisheries")
-        list.add("Kukdoo Koo")
-        list.add("Royal Circus")
+        val list = arrayListOf<SiteUI>()
+        list.add(SiteUI("asldalsdlas"))
+        list.add(SiteUI("saslkdjasd"))
+        list.add(SiteUI("asldjadssad"))
+        list.add(SiteUI("aljjsdnajkdasd"))
         siteRV.adapter = SiteListAdapter(list, object : SiteListAdapter.SiteClickHandler{
-            override fun onClick(site: String) {
-                Toast.makeText(context, site, Toast.LENGTH_SHORT).show()
+            override fun onClick(site: SiteUI) {
+
             }
         })
     }
