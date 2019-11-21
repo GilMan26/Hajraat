@@ -13,16 +13,14 @@ import kotlinx.android.synthetic.main.fragment_site_details.*
 
 class SiteDetailsFragment : Fragment() {
 
-    companion object {
-        fun newInstance(siteUI: SiteUI) = SiteDetailsFragment()
-    }
-
+    lateinit var siteUI: SiteUI
     private lateinit var viewModel: SiteDetailsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        siteUI=arguments?.getSerializable("data") as SiteUI
         return inflater.inflate(R.layout.fragment_site_details, container, false)
     }
 
@@ -34,15 +32,7 @@ class SiteDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        button1.setOnClickListener {
 
-        }
-        button2.setOnClickListener{
-
-        }
-        button3.setOnClickListener {
-
-        }
     }
 
 }
