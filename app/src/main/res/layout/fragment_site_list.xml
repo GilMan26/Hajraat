@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-   <data>
+    <data>
 
-   </data>
+    </data>
 
-   <androidx.constraintlayout.widget.ConstraintLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:background="#dddddd">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dddddd">
 
-      <androidx.recyclerview.widget.RecyclerView
-          android:id="@+id/siteRV"
-          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-          android:orientation="vertical"
-          tools:listitem="@layout/row_item_site"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/listLabelTV"
+            style="@style/BoldFontTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF"
+            android:elevation="2dp"
+            android:padding="18dp"
+            android:text="@string/work_sites"
+            android:textColor="#222222"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent" />
 
-   </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/siteRV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listLabelTV"
+            tools:listitem="@layout/row_item_site" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

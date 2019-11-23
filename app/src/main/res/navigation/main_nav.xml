@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_nav"
+    app:startDestination="@id/siteListFragment">
+
+    <fragment
+        android:id="@+id/siteListFragment"
+        android:name="com.example.hajraat.ui.haggu.sites.SiteListFragment"
+        android:label="SiteListFragment" />
+    <fragment
+        android:id="@+id/siteDetailsFragment"
+        android:name="com.example.hajraat.ui.haggu.sitedetails.SiteDetailsFragment"
+        android:label="SiteDetailsFragment" >
+        <argument
+            android:name="siteUI"
+            app:argType="com.example.hajraat.ui.models.SiteUI" />
+    </fragment>
+
+</navigation>

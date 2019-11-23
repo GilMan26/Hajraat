@@ -8,4 +8,24 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="BlackFontTV" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/gotham_narrow_black</item>
+    </style>
+
+    <style name="BoldFontTV" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/gotham_narrow_bold</item>
+    </style>
+
+    <style name="BookFontTV" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/gotham_narrow_book</item>
+    </style>
+
+    <style name="MediumFontTV" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/gotham_narrow_medium</item>
+    </style>
+
+    <style name="ThinFontTV" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/gotham_narrow_thin</item>
+    </style>
+
 </resources>

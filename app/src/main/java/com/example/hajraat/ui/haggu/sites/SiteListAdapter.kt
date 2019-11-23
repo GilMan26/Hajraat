@@ -3,6 +3,7 @@ package com.example.hajraat.ui.haggu.sites
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.hajraat.databinding.RowItemSiteBinding
 import com.example.hajraat.ui.models.SiteUI
 
@@ -13,6 +14,10 @@ class SiteListAdapter(var list : ArrayList<SiteUI>, var callback : SiteClickHand
 
     override fun onBindViewHolder(holder: ItemSiteViewHolder, position: Int) {
         holder.binding.nameTV.text = list[position].name
+        holder.binding.descriptionTV.text=list[position].description
+        Glide.with(holder.itemView.context)
+            .load(list[position].imageURL)
+            .into(holder.binding.siteIV)
         holder.itemView.setOnClickListener{
             callback.onClick(list[position])
         }

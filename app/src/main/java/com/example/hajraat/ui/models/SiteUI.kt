@@ -1,10 +1,11 @@
 package com.example.hajraat.ui.models
 
-import android.location.Location
+import java.io.Serializable
 
-data class SiteUI(
-    val name:String
-//    val description: String?,
-//    val imageURL : String?,
+
+data class SiteUI  (
+    val name:String,
+    val description: String?,
+    val imageURL : String?
 //    val location : Location?
-)
+) : Serializable
